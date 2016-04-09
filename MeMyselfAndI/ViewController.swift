@@ -60,6 +60,19 @@ class ViewController: UIViewController {
             self.butYoureWelcomeToJoinTheRide.center = CGPoint(x: 260, y: 140 + 200)
             self.butYoureWelcomeToJoinTheRide.alpha = 1
             }, completion: nil)
+        
+        let button   = UIButton(type: UIButtonType.System) as UIButton
+        button.frame = CGRectMake(260, 380, 100, 50)
+        button.backgroundColor = UIColor.greenColor()
+        button.setTitle("Join", forState: UIControlState.Normal)
+        button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.view.addSubview(button)
+    }
+    
+    func buttonAction(sender:UIButton!)
+    {
+        performSegueWithIdentifier("go_to_menu", sender: self)
     }
     
     override func didReceiveMemoryWarning() {
