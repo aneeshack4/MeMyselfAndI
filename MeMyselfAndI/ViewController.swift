@@ -20,30 +20,46 @@ class ViewController: UIViewController {
         
         meMyselfAndILabel = UILabel()
         meMyselfAndILabel.text = "\"Me Myself and I..."
-        meMyselfAndILabel.font = UIFont.systemFontOfSize(36)
+        meMyselfAndILabel.font = UIFont.systemFontOfSize(14)
         meMyselfAndILabel.sizeToFit()
         meMyselfAndILabel.center = CGPoint(x:100, y:40)
         view.addSubview(meMyselfAndILabel)
         
         UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [], animations: {
             
-            self.meMyselfAndILabel.center = CGPoint(x: 100, y: 40 + 200)
+            self.meMyselfAndILabel.center = CGPoint(x: 60, y: 40 + 200)
             
             }, completion: nil)
         
         soloRideUntilIDie = UILabel()
         soloRideUntilIDie.text = "...solo ride until I die...\" ~Bebe Rexha"
-        soloRideUntilIDie.font = UIFont.systemFontOfSize(48)
+        soloRideUntilIDie.font = UIFont.systemFontOfSize(18)
         soloRideUntilIDie.sizeToFit()
         soloRideUntilIDie.center = CGPoint(x:200, y:90)
         view.addSubview(soloRideUntilIDie)
         
+        soloRideUntilIDie.alpha = 0
+        
+        UIView.animateWithDuration(2.0, delay: 0.5, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.0, options: [], animations: {
+            
+            self.soloRideUntilIDie.center = CGPoint(x: 160, y: 90 + 200)
+            self.soloRideUntilIDie.alpha = 1 
+            }, completion: nil)
+        
         butYoureWelcomeToJoinTheRide = UILabel()
-        butYoureWelcomeToJoinTheRide.text = "But you're welcome to join me on mine. :D"
-        butYoureWelcomeToJoinTheRide.font = UIFont.systemFontOfSize(60)
+        butYoureWelcomeToJoinTheRide.text = "But I invite you to join me..."
+        butYoureWelcomeToJoinTheRide.font = UIFont.systemFontOfSize(20)
         butYoureWelcomeToJoinTheRide.sizeToFit()
-        butYoureWelcomeToJoinTheRide.center = CGPoint(x:300, y:140)
+        butYoureWelcomeToJoinTheRide.center = CGPoint(x:250, y:140)
         view.addSubview(butYoureWelcomeToJoinTheRide)
+        
+        butYoureWelcomeToJoinTheRide.alpha = 0
+        
+        UIView.animateWithDuration(2.5, delay: 0.5, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.0, options: [], animations: {
+            
+            self.butYoureWelcomeToJoinTheRide.center = CGPoint(x: 260, y: 140 + 200)
+            self.butYoureWelcomeToJoinTheRide.alpha = 1
+            }, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
