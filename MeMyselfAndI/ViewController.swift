@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         
         let button   = UIButton(type: UIButtonType.System) as UIButton
         button.frame = CGRectMake(260, 380, 100, 50)
-        button.backgroundColor = UIColor.greenColor()
+        button.backgroundColor = UIColor.redColor()
         button.setTitle("Join", forState: UIControlState.Normal)
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         
