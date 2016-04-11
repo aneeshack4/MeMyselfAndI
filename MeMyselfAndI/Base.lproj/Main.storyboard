@@ -26,10 +26,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--About MeVC-->
         <scene sceneID="xQ5-43-ddZ">
             <objects>
-                <viewController id="qM4-A8-BsD" sceneMemberID="viewController">
+                <viewController id="qM4-A8-BsD" customClass="AboutMeVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6nV-jY-qr6"/>
                         <viewControllerLayoutGuide type="bottom" id="9Ka-rJ-EbU"/>
@@ -38,16 +38,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpy-ML-2Uv">
-                                <rect key="frame" x="150" y="50" width="75" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBX-1f-jzD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qhv-pV-tMf">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="88Y-zO-vAz">
+                                        <connections>
+                                            <action selector="goBack:" destination="qM4-A8-BsD" id="8I6-u9-6IY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Forward" id="VNW-rO-Zop">
+                                        <connections>
+                                            <action selector="goForward:" destination="qM4-A8-BsD" id="iZQ-Yc-J4V"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Refresh" id="Ifm-6n-4p8">
+                                        <connections>
+                                            <action selector="doRefresh:" destination="qM4-A8-BsD" id="5Re-pl-pI7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Stop loading" id="JwI-MF-Yfz">
+                                        <connections>
+                                            <action selector="stop:" destination="qM4-A8-BsD" id="gv0-uA-YXd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="VBX-1f-jzD" id="ZL2-7K-x7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnA-dA-70l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
