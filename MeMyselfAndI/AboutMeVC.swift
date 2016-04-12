@@ -12,33 +12,24 @@ import UIKit
 class AboutMeVC: UIViewController, UIWebViewDelegate  {
     
     @IBOutlet weak var webView: UIWebView!
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
+    let url = "http://aneeshack4.github.io"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = NSURL(string: "http://aneeshack4.github.io")
-        let request = NSURLRequest(URL: url!)
+        
+        self.webView.frame = self.view.bounds
+        self.webView.scalesPageToFit = true
+        
+        let requestURL = NSURL(string:url)
+        let request = NSURLRequest(URL: requestURL!)
+        
         webView.loadRequest(request)
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
-        activityIndicator.stopAnimating()
-    }
-    
-    @IBAction func doRefresh(_: AnyObject) {
-        webView.reload()
-    }
-    
-    @IBAction func goBack(_: AnyObject) {
-        webView.goBack()
-    }
-    
-    @IBAction func goForward(_: AnyObject) {
-        webView.goForward()
-    }
-    
-    @IBAction func stop(_: AnyObject) {
-        webView.stopLoading()
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
 }

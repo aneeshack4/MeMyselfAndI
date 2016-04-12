@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MeMyselfAndI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MeMyselfAndI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,7 +29,7 @@
         <!--About MeVC-->
         <scene sceneID="xQ5-43-ddZ">
             <objects>
-                <viewController id="qM4-A8-BsD" customClass="AboutMeVC" sceneMemberID="viewController">
+                <viewController id="qM4-A8-BsD" customClass="AboutMeVC" customModule="MeMyselfAndI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6nV-jY-qr6"/>
                         <viewControllerLayoutGuide type="bottom" id="9Ka-rJ-EbU"/>
@@ -39,34 +39,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBX-1f-jzD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qhv-pV-tMf">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="Back" id="88Y-zO-vAz">
-                                        <connections>
-                                            <action selector="goBack:" destination="qM4-A8-BsD" id="8I6-u9-6IY"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Forward" id="VNW-rO-Zop">
-                                        <connections>
-                                            <action selector="goForward:" destination="qM4-A8-BsD" id="iZQ-Yc-J4V"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Refresh" id="Ifm-6n-4p8">
-                                        <connections>
-                                            <action selector="doRefresh:" destination="qM4-A8-BsD" id="5Re-pl-pI7"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Stop loading" id="JwI-MF-Yfz">
-                                        <connections>
-                                            <action selector="stop:" destination="qM4-A8-BsD" id="gv0-uA-YXd"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
